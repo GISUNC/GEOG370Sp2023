@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 5</title>
+    <style>
+        dd { 
+            display: block;
+            margin-left: 40px;
+        }
+        dt { 
+            display: block;
+            margin-left: 20px;
+        }
+
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+
+        h3 {
+        margin-left: 25px;
+        }
+
+    </style>
+</head>
+<body>
+<div style="background-color: rgb(216, 194, 154);padding: 5px;">
+
+    <h1>Section 5: Geospatial analysis with vectors</h1>
+    <table>
+        <tr>
+          <th>Homework</th>
+          <th>Deadline</th>
+        </tr>
+        <tr>
+            <td><a href="../homework/homework08.html"> Homework 8: Vector spatial analysis</a></td>
+            <td class="date">hw8</td>
+          </tr>
+      </table>
+      <h3 class="schedule">Test 3 ({Test 3})</h3>
+      <p> </p>
+      <h3><a href="videosSec5">Link to Panopto folder with videos for this section</a></h3>
+
+        <p> </p>
+</div>
+<p></p>
+<!-- <a href="xxx">Lecture Section 5</a> -->
+
+
+    <h2>Specific objectives / activities:</h2>
+    <ol>
+        <li><!-- a href="#C1"-->Make new layers resulting from a spatial analysis using one vector layer.</a></li>
+        <li><!-- a href="#C2"-->Make new layers resulting from a spatial analysis using two vector layers. </a></li> 
+    </ol> 
+    
+    
+
+    <h2 id="C1"> 1. Make new layers resulting from a spatial analysis using one vector layer. </h2>
+        <dl>
+            <!-- <dt><a href="https://sakai.unc.edu/x/LETu6K">Lecture Section 2</a></dt> -->
+            <dt>Required reading:</dt>
+            <dd><a href= "../reading_material/book/Essentials of Geographic Information Systems.pdf#page=168">Single Layer Analysis, pages 168-173.</a> </dd>
+
+            <dt>Required videos:</dt>
+            <dd><a class="data" href="dataSec5">Link to data for videos in this section</a></dd>
+            <dd><a class="videos" href= "videosSec5">Tutorial video_5a on how to make buffers.</a></dd>
+            <dd><a class="videos" href= "videosSec5">Tutorial video_5b on how to make a dissolve.</a></dd>
+            <dd><a class="videos" href= "videosSec5">Tutorial video_5c on how to make random points.</a></dd>
+            <dd><a class="videos" href= "videosSec5">Tutorial video_5d on how to make a convex hull.</a></dd>
+
+            <dt>By the end of this section you should be able to: </dt>
+            <dd>- Identify the methods and applications of spatial techniques that require one single layer</dd>
+            <dd>- Create a new layers using spatial techniques such as buffer and dissolve, and using methods such as random points and convex hull</dd>
+               
+        </dl>
+    
+    
+    <h2 id="C2"> 2. Make new layers resulting from a spatial analysis using two vector layers. </h2>
+        <dl>
+            <dt>Required reading:</dt>
+            <dd><a href= "../reading_material/book/Essentials of Geographic Information Systems.pdf#page=168">Multiple Layer Analysis, pages 174-184.</a> </dd>
+            <dt>Required videos:</dt>
+            <dd><a class="data" href="dataSec5">Link to data for videos in this section</a></dd>
+            <dd><a class="videos" href= "videosSec5">Tutorial video_5e on how to do intersections using the NC county layer and the National Forests polygon layer.</a></dd>
+            <dd><a class="videos" href= "videosSec5">Tutorial video_5f on how to do intersections and a clip using the NC county layer, National Forests polygon layer and the river line layer.</a></dd>
+            <dd><a class="videos" href= "videosSec5">Tutorial video_5g on how to do intersections and a clip using the NC county layer and point locations of hospitals. </a></dd>
+            <dd><a class="videos" href= "videosSec5">Tutorial video_5h on how to create a layer using difference on the NC county layer and the National Forests polygon layer.</a></dd>
+            <dd><a class="videos" href= "videosSec5">Tutorial video_5i on how to create a layer using symmetric difference on a NC cellphone coverage polygon layers.</a></dd>
+            <dd><a class="videos" href= "videosSec5">Tutorial video_5J on how to create a layer using union on the MAREA polygon layers and the National Forest polygon layer.</a></dd>
+
+            <dt>By the end of this section you should be able to: </dt>
+            <dd>- Identify the methods and applications of spatial techniques that require multiple layers.</dd>
+            <dd>- Create new layers using spatial techniques such as clip, intersect, symmetric difference, difference and union</dd>
+            <!-- TO DO add merge -->
+                </dl>
+
+   
+
+    
+</body>
+<script src="../links.js"></script>
+<script src="../schedules/dates.js"></script>
+<script src="../schedules/schedule.js"></script>
+
+<script>
+daLinks.writeLinks()
+UNCdates.addDatesToHTML()
+UNCdates.assignScheduleDate(schedule)
+</script>
+
+<!-- To DO: 
+Edit video on pluggin and uploading to github
+Edit video de tissot
+Change name of github video
+Create Video projections on projections and exporting to geojson, 
+</html>

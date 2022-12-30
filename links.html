@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All the links</title>
+</head>
+<body>
+    <div id="data" style="width: 500px;height: 100%; background-color: rgb(196, 255, 213);">
+    <h2>Data</h2>
+    </div>
+    <div id="videos" style="width: 500px;height: 100%; background-color: rgb(196, 252, 255);">
+        <h2>Videos</h2>
+    </div>
+    <div id="readings" style="width: 500px;height: 100%; background-color: rgb(255, 251, 196);">
+        <h2>Readings</h2>
+    </div>
+    <div id="software" style="width: 500px;height: 100%; background-color: rgb(231, 255, 196);">
+        <h2>Software</h2>
+    </div>
+
+</body>
+<script src="./links.js"></script>
+<script>
+    
+    function makeA(divID,link, name){
+        var daDiv = document.getElementById(divID);
+        var daLink = '<a href='+link+'\>' + name + '</a><br>'
+        daDiv.innerHTML = daDiv.innerHTML + daLink
+    }
+    Object.keys(daLinks.data).forEach(e => makeA('data', daLinks.data[e], e))
+    Object.keys(daLinks.videos).forEach(e => makeA('videos', daLinks.videos[e], e))
+    Object.keys(daLinks.readings).forEach(e => makeA('readings', daLinks.readings[e], e))
+    Object.keys(daLinks.software).forEach(e => makeA('software', daLinks.software[e], e))
+
+    
+</script>
+</html>

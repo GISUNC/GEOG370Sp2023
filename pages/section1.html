@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 1</title>
+    <style>
+        dd { 
+            display: block;
+            margin-left: 40px;
+        }
+        dt { 
+            display: block;
+            margin-left: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        /* h3 {
+        margin-left: 25px;
+        } */
+
+    </style>
+</head>
+<body>
+<div style="background-color: rgb(216, 194, 154);padding: 5px;">
+
+    <h1>Section 1: Introduction to managing layers </h1>
+    <table>
+           <tr>
+             <th>Homework</th>
+             <th>Deadline</th>
+           </tr>
+           <tr>
+             <td><a href="#C1">Install all software</a></td>
+             <td class="schedule">before {Introduction to data types}</td>
+           </tr>
+       <tr>
+           <td><a href="../homework/homework01.html">Homework 1:  Make your first map</a></td>
+           <td class="date">hw1</td>
+         </tr>
+         </table>
+    <!-- <h2>August 11 to August 25 2020</h2> -->
+     <h3 class="schedule">Test 1 ({Test 1}) </h3>
+     <p> </p>
+      <a class='videos' href='section1'><h3>Panopto folder with videos for this section</h3></a>
+
+    <p> </p>
+</div>
+
+    <h2>Specific objectives / activities:</h2>
+    <ol>
+        <li> <a href="#C1">Install software </a></li>
+        <li><a href="#C2">Learn the data models</a></li> 
+        <li><a href="#C3">Learn how to organize layers and change their symbology in a GIS software</a></li>
+        <li><a href="#C4">Learn how to add a maptile layer</a></li>
+        <li><a href="#C5">Learn how to create a new vector layer in a GIS software</a></li>
+        <li><a href="#C6">Learn different geographic data formats</a></li>
+        <li><a href="#C7">Learn how to use GitHub and GitHub Desktop for sharing a GeoJSON</a></li>
+
+    </ol> 
+
+
+    <h2 id="C1"> 1. Install software </h2>
+        <dl>
+            <dt >Install the following freeware in your Mac, PC or Linux computer before Jan/13/2022: </dt>
+            <dd>- <a class='software' href='qgis'>QGIS Most recent stable version</a></dd>
+            <dd>- <a class='software' href='vscode' > Visual Studio Code (VSC)</a></dd>
+            <dd>- <a class='software' href='github' > Github Desktop </a></dd>
+            <dd>- <a class='software' href='GEE'> Google Earth Engine </a> (does not need installation, but you need to make an account, please request one now)</dd>
+            <p></p>
+            <dt>If you have any difficulty installing any of this software please let the TA know as soon as possible. 
+            </dt>
+            <p></p>
+            <dt>*If interested, this is a <a href="../other/rant_opensource.html" >link to a short rant </a>on why I decided to use the listed software for this class.</dt>
+        </dl>
+    <h2 id="C2"> 2. Data models</h2>
+        <dl>
+            <dt>Required reading</dt>
+                <dd><a class='readings' href="vectorvsraster">
+                        Vector vs Raster: What’s the Difference Between GIS Spatial Data Types?, GIS Geography, July 3, 2020</a></dd>
+                <dd><a class='readings' href='datamodel'>
+                        Raster and Vector Data Model In GIS, Spatialpost Nov 26, </a></dd>
+                <dd><a href="../reading_material/data_models/raster_vs_vectors.txt">
+                        Stack Exchange Answer to Question</a></dd>
+                <!-- <dt>Watch these videos</dt> -->
+            <p></p>
+            <dt>By the end of this section you should be able to: </dt>
+                <dd>- Explain what a point layer is, and give a few examples of features in the landscape that we may represent as points on map.
+                <dd>- Explain what a line layer is, and give a few examples of features in the landscape that we may represent as a line on map.
+                <dd>- Explain what a polygon layer is, and give a few examples of features in the landscape that we may represent as a polygon on map.
+                <dd>- Explain how scale may shape our decision to represent an object with a point, line or polygon. 
+                <dd>- Explain what a raster is.
+                <dd>- Give an example of a discrete (categorical/thematic) raster and a continuous (non-discrete) raster. 
+                <!-- <dd>- Give at least 3 example of file formats use for vectors and 3 example for rasters. </dd>  -->
+            </dl>
+
+    <h2 id="C3">3. Organize layers and change their symbology</h2>
+        <dl>
+            <!-- <dt>Read this document </dt> -->
+            <dt>Required videos</dt>
+            <dt>Please notice that some parts of the videos are made using QGIS 2.18.2, so there will be some slight differences with your version. QGIS comes up with a new version almost every 2 months!</dt>
+            <dt>Also, make sure that you are logged into Sakai to be able to see the videos</dt>    
+            
+                <dd><a class='videos' href='tv0'>Tutorial video 0 Downloading data from Sakai (Data organization and unzipping files)</a></dd>
+                <dd><a class='videos' href='tv1a'>Tutorial video 1a Introduction</a></dd>
+                <dd><a class='videos' href='tv1b'>Tutorial video 1b Layers and projects</a></dd>
+                <dd><a class='videos' href='tv1c'>Tutorial video 1c Layers symbology</a></dd>
+                <dd><a class='videos' href='tv1d'>Tutorial video 1d Exporting a map</a></dd>
+                <p></p>
+                <dd><a class='data' href='dataV1'>Download data required for the videos</a></dd>
+            <p></p>
+                <dd><a class='data' href='practiceEx1'>Practice excercise</a></dd>
+                
+            <dt>By the end of this section you should be able to open vector and raster datasets in QGIS, and make and export a map.</dt>
+            <dd>Note: When representing the world with geographic information the order of layers is important.
+                    Software for managing geographic information has some similarities with video and image editing software such as Photoshop or Premier Pro. The order that you arrange your layers will determine how we see them.</br> 
+                    It is very important that you understand how to save your files in an organized manner:
+                    When you save a project in QGIS (or ARCGIS or Premier Pro or any other software that deals with big datasets) you are not necessarily saving all of the data inside that project.
+                    The project only has the instructions on what to do with your data.
+                    If you move or rename your files, the project might have problems opening your map.
+                    So don't forget to keep your projects organized!
+                </dd>
+        </dl>
+    
+        <h2 id="C4">4. Maptile layer</h2>
+        <dl>
+            <dt>Required video</dt>
+            <dd><a class='videos' href="section1">Tutorial video 1e on adding a tile layer</a></dd>
+
+            <p></p>
+            <dt>By the end of this section you should have a general idea of how map tiles look, and how to add them as a layer in QGIS. </dt>
+            <dd>Traditionally, geovisualizations were done by working with vector and raster data opened from within your local computer environment or network.
+            Today, the most common way that we consume maps is through our phones, and the data comes from the internet.
+            Tiling images is a very effective way of transfering spatially explicit visual data through the internet.
+            For example, the visual component of Google Maps or Open Street Maps are images that have been tiled.
+            By the end of the semester you will learn how to make an original tile map.
+            But for now, you will learn how open tiles in QGIS.</dd>
+            <dd>You are not expected to understand the math or the technical details on how to make a tile layer, however if you are interested in this kind of stuff you can look at <a class='readings' href='OSM'> this page on OSM tiles</a> or this page on <a class='readings'  href='bingMapTile'>Bing Map Tiles,</a> which has a nice table on the level of detail for each zoom.</dd>
+    </h2>
+
+    <h2 id="C5"> 5. Create basic vectors in a GIS software </h2>
+        <dl> 
+        <dt>Required video</dt>
+        <dt><a class='videos' href='section1' >Tutorial video 01_f on making a point, line and polygon using QGIS</a></dt>    
+        <dt>Required reading</dt>
+        <dt><a href= "../reading_material/book/Essentials of Geographic Information Systems.pdf#page=86">Read about vector data models on pages 86-94 from the book</a></dt>
+        <p></p>
+        <dt>By the end of this section you should be able to create your own vector data. You will be able to digitize your original points, lines and polygons.</dt>
+        <dd>For this introductory class, we are only doing simple "spaghetti model" digitization of vectors.
+            However, if you are serious about digitizing, or have a large project (eg: roads, land cover map) it is important to learn GIS topology rules.
+            Creating a clean vector topology dataset in GIS is something which I find much more straightforward to do in ESRI than in QGIS. However, new plugins have been created for QGIS (almost every month) that I have not tested, so it may become easier in QGIS.
+            </dd>
+        </dl>
+    
+
+    <h2 id="C6">
+        6. Gain experience using GIS file formats</h2>
+
+        <dt>Required video</dt>
+        <dd><a class= 'videos' href='tv1g'>Tutorial video 1g on exporting a shapefile as GeoJSON</a></dd>
+        <dl> 
+            <dt>Required reading</dt>
+            <dd><a class='readings' href='switchFromShapeFile'> Switch from Shapefile </a></dd>
+            <dd><a href="../reading_material/book/Essentials of Geographic Information Systems.pdf#page=121">File Formats, pages 121-124 from the book</a></dd>
+            <dd><a class='readings' href='wikiformats'>This is a (pretty incomplete) list of GIS file fomats from Wikipedia but it can give you an idea of the plethora of raster and vector formats out there</a></dd>
+            <p></p>
+            <dt>By the end of this section you should know that:</dt>
+            <dd>- Vector and raster files come in different formats. </dd>
+            <dd>- Files with extensions like .shp, .geoJSON, .kml are common vector formats. </dd>  
+            <dd>- Files with extensions like .tif, .png and .img are some examples of raster formats.</dd>      
+            <p></p>
+            <dt> The .shp format is still the most common spatial data format out there for vectors, but it has many limitations,
+            as discussed in <a class='readings' href="switchFromShapeFile"> Switch from Shapefile</a>.
+            The geoJSON format is the most common webmap vector format. 
+            One of the benefits of geoJSON is that it can be read by any text editor. 
+            However, that could also be a limitation when compared to a shapefile:
+            for example, a geoJSON with the same amount of information as a shapefile will often be larger in size. 
+            A benefit of geoJSON is that GitHub can natively display a geoJSON over a map. 
+            </dt>
+        </dl>
+        <h2 id="C7">
+        7. Sharing your maps and data using GitHub</h2>
+        <dt>Required video</dt>
+        <dd><a class='videos' href='tv1h'>Tutorial video 1h on working with GitHub and uploading a GeoJSON</a></dd>
+            
+</body>
+<script src="../links.js"></script>
+<script src="../schedules/dates.js"></script>
+<script src="../schedules/schedule.js"></script>
+
+<script>
+daLinks.writeLinks()
+UNCdates.addDatesToHTML()
+UNCdates.assignScheduleDate(schedule)
+</script>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 3 Georef and webmap</title>
+    <style>
+        dd { 
+            display: block;
+            margin-left: 40px;
+        }
+        dt { 
+            display: block;
+            margin-left: 20px;
+        }
+
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 5px;
+        }   
+        th {
+        text-align: left;
+        }
+
+
+    </style>
+</head>
+<body>
+<div style="background-color: rgb(216, 194, 154);padding: 5px;">
+
+    <h1>Section 3: Georeferencing and sharing rasters on the web</h1>
+
+ <!-- a href="XXXX"Lecture Section 3</a>  -->
+ <table>
+    <tr>
+      <th>Homework</th>
+      <th>Deadline</th>
+    </tr>
+<tr>
+    <td><a href="../homework/homework04.html">Homework 4: Georeferencing (UNC map)</a></td>
+    <td class="date">hw4</td>
+  </tr>
+  <tr>
+    <td><a href="../homework/homework05.html">Homework 5: Georeferencing (USGS historical image)</a></td>
+    <td class="date">hw5</td>
+  </tr>
+</table>
+<h3 class="schedule">Test 2 ({Test 2})</h3>
+<p> </p>
+<a class='videos' href="videosSec3"><h3>Panopto folder with videos for this section</h3></a>
+
+</div>
+<p></p>
+
+
+  
+    <h2 id="C1"> 1. Georeferencing spatial data </h2>
+    <!-- <dt>Read this document </dt> -->
+    <dt>Required reading:</dt>
+    <dd><a class='readings' href= "http://wiki.gis.com/wiki/index.php/Georeference">"Georeference, Wiki GIS</dd>
+    <dd><a class='readings' href= "https://gisgeography.com/georeferencing/">"What is Georeferencing? How to Georeference Anything", GIS Geography</dd>
+
+        
+    <p></p>
+    <dt>Required videos:</dt>
+    <dd><a class='videos' href="videosSec3">Tutorial video 02_h on georeferencing an image using QGIS</a></dd>
+    <dd><a class='videos' href="videosSec3">Tutorial video 02_g on downloading aerial photo single frames from  USGS Earth Explorer</a></dd>
+    <dd>NOT REQUIRED: <a class='videos' href="videosSec3">Tutorial video 02_z on georeferencing an image using ESRI</a></dd>
+
+
+    <p></p>
+    <dt>By the end of this section you should be able to: </dt>
+    <dd>- Explain the terms georeferencing, basemap, and control points.</dd>
+    <dd>- Understand the  applications of georeferencing historical imagery.</dd>
+    <dd>- Recognize what makes a good control point, depending on the scale and composition of the image being georeferenced.</dd>
+    <dd>- Georeference an image that has no geographic references using QGIS or ARCGIS.</dd>
+    <dd>- Understand what means to stretch, scale, rotate and skew the image.</dd>
+    <dd>- Distinguish the different distortions caused by different transformation models.</dd>
+    </dt></dl>
+
+    <h2 id="C2"> 2. Basic leaflet tile map</h2>
+        <dl>
+            <dt>Required videos:</dt>
+            <dd><a class='videos' href="videosSec3">Tutorial video_02i Creating a Tile map from a georeferenced image</a></dd>
+            <dd><a class='videos' href="videosSec3">Tutorial video_02j Uploading Tiles to Github</a></dd>
+            <p></p>
+            <dt>By the end of this section you should be able to: </dt>
+                <dd>- Share a webmap </dd>
+</body>
+<script src="../links.js"></script>
+<script src="../schedules/dates.js"></script>
+<script src="../schedules/schedule.js"></script>
+
+<script>
+daLinks.writeLinks()
+UNCdates.addDatesToHTML()
+UNCdates.assignScheduleDate(schedule)
+</script>
+</html>

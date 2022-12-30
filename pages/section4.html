@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 4</title>
+    <style>
+        dd { 
+            display: block;
+            margin-left: 40px;
+        }
+        dt { 
+            display: block;
+            margin-left: 20px;
+        }
+        
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+
+        h3 {
+        margin-left: 25px;
+        }
+
+    </style>
+</head>
+<body>
+<div style="background-color: rgb(216, 194, 154);padding: 5px;">
+
+    <h1>Section 4: Tabular data: query, data cleaning, joins and standardization</h1>
+    <table>
+        <tr>
+          <th>Homework</th>
+          <th>Deadline</th>
+        </tr>
+        <tr>
+        <td><a href="../homework/homework06pt1.html"> Homework 6pt1: Choropleth using Census data</a></td>
+        <td class="date">hw6pt1</td>
+      </tr>
+      <tr>
+        <td><a href="../homework/homework06pt2.html"> Homework 6pt2: Ratios and categories census data</a></td>
+        <td class="date">hw6pt2</td>
+      </tr>
+      <tr>
+        <td><a href="../homework/homework07.html"> Homework 7: Choropleth or proportional symbol map</a></td>
+        <td class="date">hw7</td>
+      </tr>
+      </table>
+      <h3 class="schedule">Test 2 ({Test 2})</h3>
+      <p> </p>
+        <h3><a class="videos" href="videosSec4">Link to Panopto folder with videos for this section</a></h3>
+
+
+
+</div>
+<p></p>
+<!-- <h2>General Objective: <a style="font-size: medium;">Learn how geographic data gets distorted depending on the projections
+    and recognize common coordinate systems and projections used in the United States.</a>
+</h2> -->
+<a href="../reading_material/lectures/L_Attributes_Joins_Clean_geog370_2020pptx.pdf"> Lecture Section 4a </a>
+<p></p>
+<a href="../reading_material/lectures/L_cartography_pt2.pdf"> Lecture Section 4b </a>
+
+
+    <h2>Specific objectives / activities:</h2>
+    <ol>
+        <li><a href="#C1">Creating layers from tables that have spatial information</a></li>
+        <li><a href="#C2">Querying a dataset using boolean</a></li>
+        <li><a href="#C3">Cleaning, uploading and joining a tabular dataset to a the table of a vector dataset</a></li>
+        <li><a href="#C4">Creating proportional symbol maps and choropleths </a></li>
+    </ol> 
+    
+    
+
+    <h2 id="C1"> 1. Creating layers and maps from tables that have spatial information </h2>
+        <dl>
+            <!-- <dt><a href="https://sakai.unc.edu/x/LETu6K">Lecture Section 2</a></dt> -->
+            <dt>Required videos:</dt>
+            <dd><a class="data" href= "dataSec4">Required data for the Bike Rack example</a></dd>
+            <dd><a class="videos" href= "videosSec4">Tutorial video_4a on how to open a table with latitude,longitude coordinates</a></dd>
+            <dd><a class="videos" href= "videosSec4">Tutorial video_4b on how to make a proportional symbol map</a></dd>
+            <dd><a class="data" href= "dataSec4">Required data for the Air Quality example</a></dd>
+            <dd><a class="videos" href= "videosSec4">Tutorial video_4c on another example of how to open a table with x,y data and make a proportional symbol map</a></dd>
+
+            <dt>By the end of this section you should be able to: </dt>
+            <dd>Create a point layer using a table that contains a column for the latitude and another column for the longitude.</dd>
+            <dd>Make a proportional symbol map of a point layer.</dd>
+            <dd>Import symnology and change the legend and the catergories manually</dd>
+        </dl>
+    
+    
+    <h2 id="C2">2. Quering a dataset using boolean operators</h2>
+        <dl>
+            <dt>Required reading:</dt>
+            <dd><a href= "../reading_material/book/Essentials of Geographic Information Systems.pdf#page=144">Searches and Queries, pages 144-149.</a> The book describes how queries are done in SQL. However, in class we will be using QGIS Query Builder, which uses an SQL-like WHERE clause.</dd>
+            <dd><a class="readings" href= "QUERY">QGIS information on queries</a></dd>
+            <!-- Explanation on the importance of using the great circle distance when measuring distance on a global scale -->
+            <p></p>
+            <dt>Required videos:</dt>
+            <dd><a class="data" href= "dataSec4">Required data for the next video</a></dd>
+            <dd><a class="videos" href="videosSec4">Tutorial video_4d on selecting features using UNC buildings and bike racks layers</a></dd>
+            <dd><a class="videos" href="videosSec4">Tutorial video_4e on making a query using the UNC bike rack dataset</a></dd>
+
+            <p></p>
+            <dt>By the end of this section you should be able to: </dt>
+                <dd>- Identify what is a field (column) and what is a feature (row). </dd>
+                <dd>- Identify common data types (integer, decimal, string and date).</dd>
+                <dd>- Select features manually and export them in a different format and projection.</dd>
+                <dd>- Make a query to search for data within a range of values or for an specific value.</dd>
+                <dd>- Use QGIS Query Builder format, using double quotes ("Cities") for the field name, single quotes ('Chapel Hill') for text, and no quotes for numbers. </dd>
+                <dd>- Make queries that contain boolean AND and OR operators.</dd>
+            </dl>
+
+    <h2 id="C3">3. Clean, upload and join a tabular dataset to the table of a vector dataset</h2>
+        <dl>
+            <!-- <dt>Read this document </dt> -->
+                <dt>Required videos:</dt>
+                <dd><a class="videos" href="videosSec4">Tutorial video_4f on doing a join with the 4 buildings dataset and a csv file.</a></dd>
+                <dd><a class="data" href= "dataSec4">Required data for the next video</a></dd>
+                <dd><a class="videos" href="videosSec4">Tutorial video_4g on doing a join with the WHO tuberculosis dataset and Natural Earth vector dataset.</a></dd>
+                <dd><a class="videos" href="videosSec4">Tutorial video_4h on downloading csv data from the US Census.</a></dd>
+                <dd><a class="videos" href="videosSec4">Tutorial video_4i on downloading TIGER data from the US Census.</a></dd>
+                <dd><a class="videos" href="videosSec4">Tutorial video_4j on making a join and a choropleth using US Census data.</a></dd>
+                <dd><a class="data" href= "dataSec4">If you had problems downloading Census data from the web, this zip file contains some examples</a></dd>
+
+                <p></p>
+                <dt>By the end of this section you should be able to: </dt>
+                <dd>- Identify common errors in CSV datasets, and import a CSV to QGIS</dd>
+                <dd>- Join a table with no spatial information to the attribute table of a vector layer</dd>   
+                <dd>- Identify which is the "target field" (usually from the vector attribute table) and which is the "join field" in the table that you want to merge to the vector table. </dd>
+                <dd>- Apply simple techniques to clean your data before uploading the data to QGIS, thus facilitating the process of joining your data</dd>
+                <dd>- Obtain Census data and make choropleths related to topics of your interest</dd>
+            </dt></dl>
+    
+        <h2 id="C4">4. Create proportional symbol maps and choropleths</h2>
+        <dl>
+            <!-- <dt>Read this document </dt> -->
+            <dt>Required reading:</dt>
+                <dd><a href= "../reading_material/normalize/normalizing_census_data.pdf">Normalizing Census Data ArcGIS</a></dd>
+                <dd><a href= "../reading_material/book/Essentials of Geographic Information Systems.pdf#page=160">- Data Classification page 160-166.</a> The books describes queries in SQL. However, in class we will be using QGIS Query Builder, which uses an SQL-like WHERE clause.</dd>
+                <dd><a class="readings" href="MAUP">- An Introduction to the Modifiable Areal Unit Problem</a> </dd>
+
+                <p></p>
+                <dt>Required videos:</dt>
+                <!-- to DO -->
+                
+                <dd><a class="data" href= "dataSec4">Required data for the next videos</a></dd>
+                <dd><a class="videos" href="videosSec4">Tutorial video_4k on data classification using the NC Census county map example.</a></dd>
+                <dd><a class="videos" href="videosSec4">Tutorial video_4l on normalizing data using the NC Census county map example.</a></dd>
+                <dd><a class="videos" href="videosSec4">Tutorial video_4m on creating a pie chart symbol using the NC Census county map example.</a></dd>
+                <dd><a class="videos" href="videosSec4">Tutorial video_4n on creating proportional symbols using the pie chart symbol example</a></dd>
+
+                <!-- <dd><a href="XXXX">Tutorial video_3n on MAUP</a></dd> -->
+                <p></p>
+                <dt>By the end of this section you should be able to: </dt>
+                <dd>- Classify data using equal intervals, quantiles and natural breaks, and understand the differences in these methods.</dd>
+                <dd>- Normalize data and understand the problems caused by not normalizing data. </dd>
+                <dd>- Create proportional symbols maps, where the symbol is a chart displaying Census data.</dd>
+                <dd>- Recognize what MAUP is, and why it is a very important concept in geography. </dd>
+                </dt></dl>
+
+    
+</body>
+<script src="../links.js"></script>
+<script src="../schedules/dates.js"></script>
+<script src="../schedules/schedule.js"></script>
+
+<script>
+daLinks.writeLinks()
+UNCdates.addDatesToHTML()
+UNCdates.assignScheduleDate(schedule)
+</script>
+
+
+<!-- TO DO
+    Link to Data for the videos
+    Homework
+    Maybe a video on MAUP
+ -->
+</html>

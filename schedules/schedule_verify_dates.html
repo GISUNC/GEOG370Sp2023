@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="year">Schedule Fall 22</title>
+</head>
+<style>
+    table,
+    th,
+    td {
+      border: 2px solid rgb(78, 164, 165);
+      border-collapse: collapse;
+    }
+  </style>
+<body>
+    <script src="./dates.js"></script>
+    <table id="schedule-table">
+        <tr>
+          <th>Day </th>
+          <th>Activity</th>
+        </tr>
+      </table>
+
+</body>
+<script>
+        UNCdates.makeSchedule('schedule-table')
+        document.getElementsByTagName('title')[0].innerHTML = 'Schedule ' + UNCdates.semester + UNCdates.year 
+</script>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 2</title>
+    <style>
+        dd { 
+            display: block;
+            margin-left: 40px;
+        }
+        dt { 
+            display: block;
+            margin-left: 20px;
+        }
+
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 5px;
+        }   
+        th {
+        text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+<div style="background-color: rgb(216, 194, 154);padding: 5px;">
+
+    <h1>Section 2: Projections and coordinate systems</h1>  
+    <table>
+        <tr>
+          <th>Homework</th>
+          <th>Deadline</th>
+        </tr>
+    <tr>
+        <td><a href="../homework/homework02.html">Homework 2: Github page</a></td>
+        <td class="date">hw2</td>
+      </tr>
+      <tr>
+        <td><a href="../homework/homework03.html">Homework 3: World projections</a></td>
+        <td class="date">hw3</td>
+      </tr>
+    </table>
+
+    <h3 class="schedule">Test 1 ({Test 1})</h3>
+    <p> </p>
+      <a href="https://uncch.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=9d96fe95-b6bd-4916-9c5b-ad2e01342b4a"><h3>Panopto folder with videos for this section</h3></a>
+</div>
+<p></p>
+<!-- <h2>General Objective: <a style="font-size: medium;">Learn how geographic data gets distorted depending on the projections
+    and recognize common coordinates systems and projections used in the United States.</a>
+</h2> -->
+<a href="#">Lecture Section 2 Projections</a>
+<p></p>
+<a href="#">Lecture Section 2 Georeferencing</a>
+
+
+    <h2>Specific objectives / activities:</h2>
+    <ol>
+        <li> <a href="#C1">Modeling the earth as a sphere, an ellipsoid or geoid </a></li>
+        <li><a href="#C2">Reviewing the geographic coordinate system GCS</a></li> 
+        <li><a href="#C3">World map projections</a></li>
+        <li><a href="#C4">Other Projections and how to reproject your data</a></li>
+        <!-- <li><a href="#C5">Georeferencing spatial data</a></li> -->
+
+    </ol> 
+    
+    
+
+    <h2 id="C1"> 1. Modeling the earth as a sphere, an ellipsoid or geoid </h2>
+        <dl>
+            <!-- <dt><a href="https://sakai.unc.edu/x/LETu6K">Lecture Section 2</a></dt> -->
+            <dt>Required reading:</dt>
+            <dd><a class='readings' href= "ellipsoid">Read this document that explains the use of spheres, ellipsoid and geoids to model the shape of Earth</dd>
+            <dd><a class='readings' href= "usgsfaq">Read this short description of a geoid by the USGS.</a> Make sure you understand this figure from the USGS</dd>
+            <img src="../figures/geoid.png" alt="USGS Geoid simple figure"></img>
+            <dd><a class='readings' href="USGSgeoid">Read this short description of a geoid by NOAA</a></dd>
+            <dd><a class='readings' href= "nytimesGeodetic">Read this NY Times article about the measuring the vertical datum</a></dd>
+
+            <!-- <dt><a href= "../reading_material/book/Essentials of Geographic Information Systems.pdf#page=43.5">Read pages 43-44 about geographic coordinate system from the book</a></dt> -->
+            </dl>
+        <dt>By the end of this section you should be able to:</dt>
+            <dd>- Define a sphere, an ellipsoid, a datum and a geoid. </dd>
+            <dd>- Define the semi-major axis, the semi-minor axis and the inverse flattening.</dd>
+            <dd>- Know how to distinguish between conical, cylindrical, and azimuthal projections.</dd>
+            <dd>- Recognize the standard Mercator projection.</dd>
+            <dd>- Define a great circle distance.</dd>
+            <dd>- Define Tissot’s indicatrix, and explain how is it used to observe projection distortions.</dd>
+            <dd>- Understand what it means to say that a projection is conformal, equidistance, equal-area (equivalent), or azimuthal.</dd>
+            <dd>- Understand the general characteristics of UTM and State Plane projections.</dd>
+            <dd>- Memorize the following EPSG projections’ names and their common uses (EPSG:4326, EPSG:3857, EPSG:2264, and EPSG:2163)</dd>
+        </dl>
+    
+    
+    <h2 id="C2"> 2. Reviewing the geographic coordinate system (GCS)</h2>
+        <dl>
+            
+            <dt>Required reading:</dt>
+            <dd><a class='readings' href= "latlon"> Latitude, Longitude and Coordinate System Grids, GIS Geography.</dd>
+            <dd><a href= "../reading_material/book/Essentials of Geographic Information Systems.pdf#page=43.5">  Geographic coordinate system, pages 43-44.</a></dd>
+            <dd><a class='readings' href= "greatcircle"> Why Are Great Circles the Shortest Flight Path?, GIS Geography.</a></dd>
+            <!-- Explanation on the importance of using the great circle distance when measuring distance on a global scale -->
+            <p></p>
+            <dt>Required videos:</dt>
+            <dd><a class='videos' href="videosSec2">Tutorial video_02a on geographic coordinate system using QGIS</a></dd>
+            <p></p>
+            <dt>By the end of this section you should be able to: </dt>
+                <dd>Define longitudes, latitudes, meridians, the prime meridian, the antimeridian, the international date line, parallels, and the equator</dd>
+                <dd>State the maximum and minimum values of a latitude and a longitude.</dd>
+                <dd>Explain how the values of N,S,E,W and the signs (-,+) change in longitude or latitude depending on your location on earth. </dd>
+                <dd>Define DMS and Decimal degrees, and know how to convert from one to the other. </dd>
+                <!-- <dd>What is the great circle distance?</dd> -->
+            <p></p>
+            <dt>By end of this section you should be able to complete the following <a href="../practice_exercises/ex_DMS_dd.pdf">exercise</a></dt>
+                
+            </dl>
+
+    <h2 id="C3">3. Map projections</h2>
+        <dl>
+            <!-- <dt>Read this document </dt> -->
+            <dt>Required reading:</dt>
+                <dd><a class='readings' href= "projections">What are Map Projections? (And Why They Are Deceiving to the Human Eye), GIS Geography</dd>
+                <dd><a href= "../reading_material/book/Essentials of Geographic Information Systems.pdf#page=45">  Map projections, pages 45-49.</a></dd>
+                <p></p>
+                <dt>Required videos:</dt>
+                <dd><a class='videos' href="vVox">VOX video on map projections</a></dd>
+                <dd><a class='videos' href="vSciShow">SciShow video on map projections</a></dd>
+                <!-- TO DO -->
+                <dd><a class='videos' href="videosSec2">Tutorial video_02b on adding a plug-in to QGIS </a></dd>
+                <dd><a class='videos' href="videosSec2">Tutorial video_02c on how to see data in different projections in QGIS and use Tissot’s indicatrix </a></dd>
+                <dd><a class='videos' href="videosSec2">Tutorial video_02d on how to create a Github page and upload your images </a></dd>
+                <p></p>
+                <dd><a class='data' href="dataSakaiSec2_01">Download data for the videos and homework</a></dd>
+                <p></p>
+                <dt>By the end of this section you should be able to: </dt>
+                <dd>- Easily recognize if a map has the following projections: EPSG 4326, Mercator, Pseudo Mercator (Web Mercator), Lambert’s Cylindrical, Winkel Tripel, Dymaxion</dd>
+                <dd>- Identify when a map is not in GCS and the units are in meters or feet. </dd>
+                <dd>- Use QGIS to make maps in different projections and display the Tissot indicatrix to display distortions in shape and area.</dd>
+                <!-- <dd>Understand what it means to say that a projection is conformal, equidistance, equal-area (equivalent), or azimuthal. </dd> -->
+                <dd>- Install a new plug-in to QGIS </dd>
+                <dd>- Share your maps by creating a webpage in Github </dd>
+
+            </dt></dl>
+    
+        <h2 id="C4">4. UTM and State Plane projections and how to reproject data</h2>
+        <dl>
+            <!-- <dt>Read this document </dt> -->
+            <dt>Required reading:</dt>
+                <dd><a class='readings' href= "UTM">"How Universal Transverse Mercator (UTM) Works", GIS Geography</dd>
+                <dd><a class='readings' href= "StatePlane">"The State Plane Coordinate System (SPCS)", GIS Geography</a></dd>
+                <p></p>
+                <dt>Required videos:</dt>
+                <!-- to DO -->
+                <dd><a class='videos' href="videosSec2">Tutorial video 02_e on UTM and State Plane; video on map projections and how to reproject</a></dd>
+                <dd><a class='videos' href="videosSec2">Tutorial video 02_f on adding a scale, a north and a legend</a></dd>
+                <dd><a class='data' href="dataSakaiSec2_02">Required data for the videos</a></dd>
+                <p></p>
+                <dt>By the end of this section you should be able to: </dt>
+                <dd>- Identify the particularities of a UTM and SPCS projection.</dd>
+                <dd>- Explain what is a false easting and a false northing, and the common units used in UTM and SPCS.</dd>
+                <dd>- Explain the difference between presenting the spatial data through "on-the-fly" transformation vs. reprojecting (making a new copy of the data in a new projection) in QGIS</dd>
+                <p></p>
+                <dt>By end of this section you should be able to complete the following <a href="../practice_exercises/ex_projections.pdf">exercise</a></dt>
+                </dt></dl>
+
+</body>
+<script src="../links.js"></script>
+<script src="../schedules/dates.js"></script>
+<script src="../schedules/schedule.js"></script>
+
+<script>
+daLinks.writeLinks()
+UNCdates.addDatesToHTML()
+UNCdates.assignScheduleDate(schedule)
+</script>
+</html>
+

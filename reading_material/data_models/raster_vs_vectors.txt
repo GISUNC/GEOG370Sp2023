@@ -1,0 +1,48 @@
+Raster vs. Vector discussion on Stackexchange. 
+https://gis.stackexchange.com/questions/7077/what-are-raster-and-vector-data-in-gis-and-when-to-use
+
+Original Question:
+What are raster and vector data in the GIS context?
+In general terms what applications, processes, or analysis are each suited for? (and not suited for!)
+
+Answer 1: 
+
+Vector Data
+
+Advantages : Data can be represented at its original resolution and form without generalization. Graphic output is usually more aesthetically pleasing (traditional cartographic representation); Since most data, e.g. hard copy maps, is in vector form no data conversion is required. Accurate geographic location of data is maintained. Allows for efficient encoding of topology, and as a result more efficient operations that require topological information, e.g. proximity, network analysis.
+
+Disadvantages: The location of each vertex needs to be stored explicitly. For effective analysis, vector data must be converted into a topological structure. This is often processing intensive and usually requires extensive data cleaning. As well, topology is static, and any updating or editing of the vector data requires re-building of the topology. Algorithms for manipulative and analysis functions are complex and may be processing intensive. Often, this inherently limits the functionality for large data sets, e.g. a large number of features. Continuous data, such as elevation data, is not effectively represented in vector form. Usually substantial data generalization or interpolation is required for these data layers. Spatial analysis and filtering within polygons is impossible
+
+Raster Data
+
+Advantages : The geographic location of each cell is implied by its position in the cell matrix. Accordingly, other than an origin point, e.g. bottom left corner, no geographic coordinates are stored. Due to the nature of the data storage technique data analysis is usually easy to program and quick to perform. The inherent nature of raster maps, e.g. one attribute maps, is ideally suited for mathematical modeling and quantitative analysis. Discrete data, e.g. forestry stands, is accommodated equally well as continuous data, e.g. elevation data, and facilitates the integrating of the two data types. Grid-cell systems are very compatible with raster-based output devices, e.g. electrostatic plotters, graphic terminals.
+
+Disadvantages: The cell size determines the resolution at which the data is represented.; It is especially difficult to adequately represent linear features depending on the cell resolution. Accordingly, network linkages are difficult to establish. Processing of associated attribute data may be cumbersome if large amounts of data exists. Raster maps inherently reflect only one attribute or characteristic for an area. Since most input data is in vector form, data must undergo vector-to-raster conversion. Besides increased processing requirements this may introduce data integrity concerns due to generalization and choice of inappropriate cell size. Most output maps from grid-cell systems do not conform to high-quality cartographic needs.
+
+share improve this answer
+answered Mar 11 '11 at 4:24
+community wiki
+
+Mapperz
+add a comment
+19
+
+Answer 2:
+
+Pixels vs Coordinates When I think Raster maps, my first thought is satellite imagery. Almost every pixel in a detailed satellite image of a urban area could contain unique information. A single tile in a web map (typically a variant of Mercator loosely referred to as "Spherical Mercator" or "Web Mercator" and supported by Google, Bing, Yahoo, OSM and ESRI)typically has 256 x 256 = 65,536 pixels, and each zoom level has (2^zoom * 2^zoom) tiles. When I think Vector, I think polygons and lines. For example, a shape file detailing zoning boundaries of an entire city (potentially millions of Raster tiles) area might only have 65,000 Vector shapes.
+
+Accurate Scaling It sounds like you (and probably most readers) already know the most obvious difference between raster fixed pixels and vector (coordinate maps). Vector drawings (and maps) can scale with a higher degree of fidelity than pixels because vector data contains coordinate patterns (points, polygons, lines etc) that can rendered relative to each other at different resolutions using simple formulas, while pixel resizing typically uses a smoothing algorithm that results in image artifacts.
+
+Image Compression vs Structure Compression In practice, most images don't have 100% unique pixels can be compressed into smaller data packets, and many vector files contain excess detail that is not needed at many low detail zoom levels. Image compression is a well known and very pretty efficient process and almost every coding library has built in classes to do this work. Vector coordinate compression, or "geometry simplification" is a bit less common (as GIS in general is a bit less common than general image manipulation). In my experience you will spend close to 0 time thinking about image compression (simply turn it off or on) and considerably more time thinking about spatial compression. Check out the Douglas Peucker Algorithm for examples, or just play around with QGIS and some Census boundary files.
+
+Client vs Server Side Rendering Eventually everything viewed on a computer is rendered into pixels on the screen at a particular resolution (ie zoom level). Often (especially on the web) the challenge is getting those pixels in front of users as efficiently as possible. The US Census Tract & Block group shape files are particularly interesting because they are just over the boundary of vector datasets that are 'too big' to render in a web browser as vector data. In, contrast US Counties can just barely be rendered in modern browsers as a vector download. While a US Census Block Group vector shape file would certainly be smaller than a raster tileset rendered to cover the entire US at multiple zoom levels, the Block Group Shape file is too large (close to 1GB) for a web browser to download in demand. Even if the web browser could download the file quickly, most web browsers (even using flash) are quite slow when rendering huge numbers of shapes. So, for viewing large vector datasets, you are often better off translating them into compressed images for transmission to the web browser.
+
+Some Practical Examples I answered a similar question a few days ago about rendering large datasets in google maps. You can see the question and a detailed analysis of "best practice" as used by the NY Times and others today here.
+
+A few years ago decided to transition away from flash heavy client side vector rendering towards server side vector rendering that delivers compressed image tiles to pure html & JavaScript. We have a map gallery with several versions of Html+Raster (Server Generated Image Tiles) and Flash+Vector (client side heavy rendering).
+
+share improve this answer
+edited Apr 13 '17 at 12:34
+community wiki
+
+Glenn

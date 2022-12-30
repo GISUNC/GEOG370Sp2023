@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 6: Rasters</title>
+    <style>
+        dd { 
+            display: block;
+            margin-left: 40px;
+        }
+        dt { 
+            display: block;
+            margin-left: 20px;
+        }
+
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+
+        h3 {
+        margin-left: 25px;
+        }
+
+    </style>
+</head>
+<body>
+<div style="background-color: rgb(216, 194, 154);padding: 5px;">
+
+    <h1>Section 6: Geospatial Analysis with Rasters</h1>
+    <table>
+        <tr>
+          <th>Homework</th>
+          <th>Deadline</th>
+        </tr>
+        <tr>
+            <td><a href="../homework/homework09.html">Homework 9: GEE Introduction</a></td>
+            <td class="date">hw9</td>
+          </tr>
+      </table>
+      <h3 class="schedule">Test 3 ({Test 3})</h3>
+</div>
+<p></p>
+
+    <h2>Specific objectives / activities:</h2>
+    <ol>
+        <li> <a href="#C1">Reclassifying raster data</a></li>
+        <li><!-- a href="#C2"-->Intro to Google Earth Engine (GEE) spatial analysis</a></li> 
+        <li><!-- a href="#C3"-->Topography: making slopes, aspect and hillshade layers</a></li> 
+        <li><!-- a href="#C4"-->Overlay analysis using GEE</a></li> 
+        <li><!-- a href="#C5"-->Create proportional symbol maps and choropleths </a></li>
+
+    </ol> 
+    
+    
+
+    <h2 id="C1"> 1. Reclassifying raster data. </h2>
+        <dl>
+            <!-- <dt><a href="https://sakai.unc.edu/x/LETu6K">Lecture Section 2</a></dt> -->
+            <dt>Required reading:</dt>
+            <dd><a href= "../reading_material/book/Essentials of Geographic Information Systems.pdf#page=186">Geospatial Analysis II: Raster Data, pages 186-200.</a> </dd>
+
+
+            <dt>Required videos:</dt>
+            <dd><a class="data" href="dataSec6">Link to data for videos in this section</a></dd>
+            <dd><a class="videos" href= "video6_a">Tutorial video_6a on how to reclassify a small raster image using QGIS.</a></dd>
+            <dd><a class="videos" href= "video6_b">Tutorial video_6b on how to reclassify a raster image with multiple classes using QGIS.</a></dd>
+            
+            <!-- <dd><a href= "XXXXX">Tutorial video_6c on how to reclassify a raster image using QGIS.</a></dd> -->
+
+            <dt>By the end of this section you should be able to: </dt>
+            <dd>- Understand the value of reclassifying raster data.</dd>
+            <dd>- Use QGIS raster calculator to reclassify raster images</dd>
+               
+        </dl>
+    <h2 id="C2"> 2. Getting Started with GGE for raster analysis</h2>
+        <dl>
+            <dt>Required videos:</dt>
+            <dd><a class="videos" href= "GEE_intro">GEE tutorial on getting started using GEE</a></dd>
+            <dd><a class="videos" href= "GEE_import">GEE tutorial on importing a shapefile and query.</a></dd>
+            <dd><a class="videos" href= "GEE_color">GEE tutorial on assigning color to a map</a></dd>
+            <dd><a class="videos" href= "GEE_share">GEE tutorial on how to share your code and assets</a></dd>
+            <dt>By the end of this section you should be able to: </dt>
+            <dd>- Display raster data in GEE using different color schemes, zoom levels and zoom centers</dd>
+        </dl> 
+    <h2 id="C3"> 3. Topography: making slopes, aspect and hillshade layers</h2>
+        <dl>
+            <dt>Required reading:</dt>
+            <dd><a class="readings" href= "SRTM">"SRTM Shuttle Radar Topography Mission", GIS Geography.</a> </dd>
+            <dd><a class="readings" href= "LIDAR">"Complete guide to LIDAR", GIS Geography.</a> </dd>
+            <dd><a class="readings" href= "SLOPE">"Slope/Aspect", GIS Geography.</a> </dd>
+
+            <dt>Required videos:</dt>
+            <dd><a class="videos" href= "GEE_SRTM">GEE tutorial video on using SRTM data using GEE.</a></dd>
+ 
+            <dt>By the end of this section you should be able to: </dt>
+            <dd>- Understand how data is generated with SRTM and LIDAR, and how this data is used to create digital elevation models (DEM)</dd>
+            <dd>- Mention applications of slope, aspect or hillshade layers.</dd>
+            <dd>- Identify if a raster layer is a slope, aspect or hillshade.</dd>
+            <dd>- Create a slope, aspect and hillshade layer, starting with a DEM.</dd>
+        </dl>
+
+        <h2 id="C4"> 4. Overlay analysis</h2>
+        <dl>
+            <dd><a class="videos" href= "GEE_suitability">GEE tutorial: making a suitability analysis</a></dd>
+            <dt>By the end of this section you should be able to: </dt>
+            <dd>- Apply geospatial analysis techniques to single band datasets in GEE to create a suitability map</dd>
+        </dl> 
+
+    
+</body>
+
+<script src="../links.js"></script>
+<script src="../schedules/dates.js"></script>
+<script src="../schedules/schedule.js"></script>
+
+<script>
+daLinks.writeLinks()
+UNCdates.addDatesToHTML()
+UNCdates.assignScheduleDate(schedule)
+</script>
+
+
+</html>

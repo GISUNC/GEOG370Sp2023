@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="year">Schedule Fall 22</title>
+</head>
+<style>
+    table,
+    th,
+    td {
+      border: 2px solid rgb(78, 164, 165);
+      border-collapse: collapse;
+    }
+  </style>
+<body>
+    <script src="./dates.js"></script>
+    <script src="./schedule.js"></script>
+
+    <table id="schedule-table">
+        <tr>
+          <th>Day </th>
+          <th>Activity</th>
+        </tr>
+      </table>
+
+</body>
+<script>
+        var daObj = {} // I need this since the method that I am using requires this variable
+        var daTable = document.getElementById('schedule-table')
+        Object.keys(schedule).forEach((e)=>{
+            if (e != 'version'){
+            UNCdates.makeTable(schedule[e],e)}
+        })
+        document.getElementsByTagName('title')[0].innerHTML = 'Schedule GEOG370 ' + UNCdates.semester + UNCdates.year + " v." +schedule['version']
+        
+</script>
+</html>

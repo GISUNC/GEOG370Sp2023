@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 7: Remote Sensing</title>
+    <style>
+        dd { 
+            display: block;
+            margin-left: 40px;
+        }
+        dt { 
+            display: block;
+            margin-left: 20px;
+        }
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+
+        ul {
+            margin: 1px 0;
+        }
+        h3 {
+        margin-left: 25px;
+        }
+
+    </style>
+</head>
+<body>
+<div style="background-color: rgb(216, 194, 154);padding: 5px;">
+
+    <h1>Section 7: Remote Sensing with big data</h1>
+    <table>
+        <tr>
+          <th>Homework</th>
+          <th>Deadline</th>
+        </tr>
+          <tr>
+            <td>
+              <a href="../homework/homework10.html">Homework 10: GEE Short Presentation</a>
+            </td>
+        <td class="date">hw10</td>
+          </tr>
+      </table>
+       <p> </p>
+       <h3 class="schedule">Test 3 ({Test 3})</h3>
+
+</div>
+<p></p>
+<a href="../reading_material/lectures/Topographic_landscape.pdf"->Lecture Section 7 Topographic Landscape</a>
+
+<a href="../reading_material/lectures/Lecture_Color_Theory.pdf"->Lecture Section 7 Color Theory</a>
+
+
+    <h2>Specific objectives / activities:</h2>
+    <ol>
+        <li> <a >Remote sensing using Google Earth Engine</a></li>
+        <li><a >Zonal Statistics</a></li> 
+    </ol> 
+    
+
+    <h2 id="C1"> 1. Remote sensing using Google Earth Engine </h2>
+        <dl>
+            <!-- <dt><a href="https://sakai.unc.edu/x/LETu6K">Lecture Section 2</a></dt> -->
+            <dt>Required reading:</dt>
+            <dd><a class="readings" href= "CORONA">It Spied on Soviet Atomic Bombs. Now It’s Solving Ecological Mysteries. New York Times.</a> </dd>
+
+            <dd><a href= "../reading_material/book/Essentials of Geographic Information Systems.pdf#page=96">Satellite Imagery and Aerial Photography, pages 96-101.</a> </dd>
+            <dd><a class="readings" href= "rs_intro">  "What is Remote Sensing? The Definitive Guide", GIS Geography.</a> </dd>
+            <dd><a class="readings" href= "NDVI">"What is NDVI (Normalized Difference Vegetation Index)?", GIS Geography.</a> </dd>
+
+            
+            <dt>Required videos:</dt>
+            <dd><a class="videos" href= "GEE_band_combination">GEE tutorial video on band-color combinations.</a></dd>
+            <!-- <dd><a href= "XXX">GEE tutorial on NDVI.</a></dd> -->
+            <dd><a class="videos" href= "GEE_image_collection">GEE tutorial video on reducing an image collection.</a></dd>
+            <dd><a class="videos" href= "GEE_export">GEE tutorial video on exporting data.</a></dd>
+
+            <dt>By the end of this section you should be able to: </dt>
+            <dd>- Upload data from GEE and do a remote sensing analysis of a region using data collected from a satellite</dd>
+            <dd>- Recognize some of the most common remote sensing datasets and their applications</dd>
+            <dd>- Understand basic remote sensing concepts such as:
+                <ul>
+                    <li>EM spectrum </li>
+                    <li>spectral bands</li>
+                    <li>active vs. passive sensors</li>
+                    <li>multispectral vs hyperspectral imagery</li>
+                    <li>spatial resolution</li>
+                    <li>spectral resolution</li>
+                    <li>temporal resolution</li>
+                    <li>NDVI</li>
+                  </ul> 
+            </dd>
+            <dd>- Understand some basic GEE concepts:
+                <ul>
+                    <li>ImageCollection</li>
+                    <li>Reducing an ImageCollection</li>
+                    <li>FeatureCollection</li>
+                  </ul> 
+            </dd>  
+        </dl>   
+        <h2 id="C2"> 2. Zonal Statisics</h2>
+        <dl>
+            <dd><a class="videos" href= "GEE_zonal">GEE tutorial on doing a zonal statistics analysis</a></dd>
+            <dt>By the end of this section you should be able to: </dt>
+            <dd>- Apply a zonal statistics analysis on a NDVI layer</dd>
+        </dl> 
+</body>
+
+<script src="../links.js"></script>
+<script src="../schedules/dates.js"></script>
+<script src="../schedules/schedule.js"></script>
+
+<script>
+daLinks.writeLinks()
+UNCdates.addDatesToHTML()
+UNCdates.assignScheduleDate(schedule)
+</script>
+</html>
