@@ -38,10 +38,10 @@ var UNCdates = {
             day6:'Projections',
             day7:'Projections and Georeferencing',
             day8:'Exercise: georeference UNC maps and create tiles',
-            day9:'Webmaps',
-            day10: 'Test 1',
-            day11: 'Tables',
-            day12: 'Choropoleths',// check date
+            day9:'Tables',
+            day10: 'Recitation for Georeferencing HW 5',
+            day11: 'Test 1',
+            day12: 'Choropleths',// check date
             day13: 'Classification Schemes and Ratios',
             day14: 'Apply classification and ratios to your data',
             day15: 'Share your maps / RECAP',
