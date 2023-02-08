@@ -1,4 +1,4 @@
-var schedule = { // version Dec 30 2022
+var schedule = { // version Feb 8 2023
   "Mon Jan 09 2023": "Introduction to class",
   "Wed Jan 11 2023": "Introduction to data types",
   "Mon Jan 16 2023": "No Classes",
